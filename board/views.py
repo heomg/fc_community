@@ -50,7 +50,7 @@ def board_write(request):
 def board_list(request):
     all_boards = Board.objects.all().order_by('-id')
     page = request.GET.get('p', 1)
-    paginator = Paginator(all_boards, 2)
+    paginator = Paginator(all_boards, 4)
 
     boards = paginator.get_page(page)
 
