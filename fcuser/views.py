@@ -50,5 +50,7 @@ def register(request):
             )
 
             fcuser.save()
+            
+            return redirect('/fcuser/login')
 
         return render(request, 'register.html', res_data)
